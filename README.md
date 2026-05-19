@@ -2,6 +2,30 @@
 
 「現場主義。声を聞きに行く政治。」をコンセプトにした、田中せいじ氏の政治活動オフィシャルサイトです。
 
+## 公開URL
+
+- **本番(暫定)**: https://tanaka-seiji-hp.vercel.app
+- **本番(独自ドメイン)**: https://tanaka-seiji.jp ← DNS設定後に有効化
+- **GitHub**: https://github.com/s-bb-tanaka/tanaka-seiji-hp
+- **Vercel管理画面**: https://vercel.com/s-bb-tanakas-projects/tanaka-seiji-hp
+
+## 運用フロー(自動デプロイ)
+
+GitHub と Vercel が連携されているため、ローカルで修正 → `git push` するだけで本番が自動更新されます。
+
+```powershell
+# 修正後、いつものコマンドで本番反映
+cd C:\Users\user\Desktop\tanaka-seiji-hp
+git add -A
+git commit -m "更新内容を簡潔に"
+git push origin main
+# → 約30秒で https://tanaka-seiji.jp に反映
+```
+
+## ドメイン設定
+
+独自ドメイン `tanaka-seiji.jp` の DNS 設定手順は `DNS設定手順.md` を参照してください。
+
 ## ファイル構成
 
 ```
