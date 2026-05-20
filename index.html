@@ -376,6 +376,19 @@
     color:var(--green-800);text-decoration:none;border-bottom:1px solid currentColor;
   }
   .media-more .links a:hover{color:var(--green-700)}
+  .media-video{margin-top:40px}
+  .media-video-title{
+    font-family:var(--font-serif);color:var(--green-800);font-size:22px;margin:0 0 18px;
+    letter-spacing:.04em;
+  }
+  .video-wrap{
+    position:relative;width:100%;padding-top:56.25%;
+    border-radius:var(--radius);overflow:hidden;
+    background:#000;box-shadow:var(--shadow);border:1px solid var(--line);
+  }
+  .video-wrap iframe{
+    position:absolute;inset:0;width:100%;height:100%;border:0;display:block;
+  }
   @media (max-width:820px){.media-grid{grid-template-columns:1fr}}
 
   /* ACTIVITY */
@@ -394,11 +407,27 @@
   .sns-card .label{font-size:12px;letter-spacing:.18em;color:var(--ink-3);font-weight:700}
   .sns-card .handle{font-family:var(--font-serif);font-size:20px;font-weight:700;margin:2px 0 6px}
   .sns-card .desc{font-size:13.5px;color:var(--ink-2);margin:0}
-  .ig-embed-note{
-    margin-top:24px;background:var(--green-50);border:1px solid var(--green-100);
-    color:var(--green-800);border-radius:var(--radius);padding:16px 18px;font-size:13.5px;
+  .embed-section{margin-top:40px}
+  .embed-title{
+    font-family:var(--font-serif);color:var(--green-800);font-size:22px;margin:0 0 18px;
+    letter-spacing:.04em;
   }
-  @media (max-width: 820px){.sns-grid{grid-template-columns:1fr}}
+  .embed-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .embed-col{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px;box-shadow:var(--shadow-sm);overflow:hidden;
+  }
+  .embed-label{
+    font-size:11px;letter-spacing:.2em;color:var(--ink-3);font-weight:700;
+    margin-bottom:12px;
+  }
+  .embed-col iframe,.embed-col .instagram-media,.embed-col .twitter-tweet{
+    margin:0 !important;width:100% !important;min-width:0 !important;
+  }
+  @media (max-width: 820px){
+    .sns-grid{grid-template-columns:1fr}
+    .embed-grid{grid-template-columns:1fr}
+  }
 
   /* JOIN */
   #join{
@@ -498,7 +527,8 @@
       <div class="meta">
         <span class="chip"><span class="dot"></span>荒川区在住</span>
         <span class="chip">陸上自衛隊高等工科学校 第56期</span>
-        <span class="chip">航空自衛隊パイロット候補生</span>
+        <span class="chip">航空自衛隊航空学生 69期</span>
+        <span class="chip">フライトコース 16-F</span>
         <span class="chip">4社経営</span>
       </div>
       <div class="cta-row">
@@ -540,7 +570,7 @@
       </div>
       <div class="creed-card reveal">
         <div class="creed-num">PRINCIPLE 03</div>
-        <h3>善意頼み・曖昧な責任を許さない</h3>
+        <h3>善意頼み・曖昧な責任を見逃さない</h3>
         <p>「誰か一人のいい人」に依存した仕組みは長続きしません。権限と責任の明文化、資金と情報の見える化、第三者によるチェックの制度化を、政治家の責任として設計します。</p>
       </div>
     </div>
@@ -562,7 +592,7 @@
       <div class="reveal">
         <h3>田中せいじ <span style="font-size:13px;color:var(--ink-3);font-weight:500;margin-left:8px">たなか せいじ</span></h3>
         <table class="profile-table">
-          <tr><th>生年月日</th><td>平成6年(1994年)4月16日 ／ 31歳</td></tr>
+          <tr><th>生年月日</th><td>平成6年(1994年)4月16日 ／ 32歳</td></tr>
           <tr><th>居住地</th><td>東京都 荒川区</td></tr>
           <tr><th>学歴</th><td>
             陸上自衛隊高等工科学校 第56期<br />
@@ -572,22 +602,16 @@
             <span class="tag">株式会社Comternal 取締役会長</span>
             <span class="tag">株式会社まいぱす 代表取締役</span>
             <span class="tag">株式会社グレートハック 代表取締役</span>
-            <span class="tag">株式会社アリスの介護 代表取締役</span>
+            <span class="tag">株式会社アリスの介護 取締役会長</span>
           </td></tr>
-          <tr><th>資格</th><td>
-            <span class="tag-warm tag">TOEIC 705</span>
-            <span class="tag-warm tag">事業用操縦士(学科)</span>
-            <span class="tag-warm tag">航空無線通信士 丙種</span>
-            <span class="tag-warm tag">危険物取扱者 乙4</span>
-          </td></tr>
-          <tr><th>特技</th><td>コミュニケーション、行動力、英会話</td></tr>
+          <tr><th>特技</th><td>コミュニケーション、行動力、英会話、先端技術理解</td></tr>
           <tr><th>趣味</th><td>
             <span class="tag">釣り</span>
             <span class="tag">キャンプ</span>
             <span class="tag">スノーボード</span>
             <span class="tag">映画鑑賞</span>
           </td></tr>
-          <tr><th>好きな音楽</th><td>Creepy Nuts</td></tr>
+          <tr><th>好きな音楽</th><td>Creepy Nuts、サカナクション</td></tr>
         </table>
       </div>
     </div>
@@ -599,7 +623,7 @@
         <li class="hi">
           <span class="year">2010</span>
           <b>防衛省 陸上自衛隊 武山駐屯地 入隊</b>
-          <span class="sub">第1〜第3教育隊にて区隊員・教育隊の指揮・統制を担当(最大1,000名)。東日本大震災の災害派遣業務にも従事。在隊中『優秀隊員褒章』を4回受章。</span>
+          <span class="sub">第1〜第3教育隊にて区隊員・教育隊の指揮・統制を区隊委員長及び風紀委員等にて担当(最大1,000名)。東日本大震災の災害派遣の支援業務にも従事。在隊中『優秀隊員褒章』を4回受章。</span>
         </li>
         <li>
           <span class="year">2013</span>
@@ -614,7 +638,7 @@
         <li>
           <span class="year">2016</span>
           <b>航空自衛隊 美保基地 3輸空隊 第41飛行隊へ転属</b>
-          <span class="sub">飛行訓練、気象予報、航空機運用マネジメント、訓練計画立案、航空機重量重心計算システム構築、外国籍航空機対処(実動)、鳥取地震の災害派遣業務などに従事。</span>
+          <span class="sub">飛行訓練、気象予報、航空機運用マネジメント、訓練計画立案、航空機重量重心計算システム構築、鳥取地震の初動対応後方支援に従事。</span>
         </li>
         <li class="hi">
           <span class="year">2017</span>
@@ -623,18 +647,23 @@
         </li>
         <li>
           <span class="year">2018</span>
-          <b>株式会社ティエラコム 入社(教育事業)</b>
-          <span class="sub">能力開発センター徳山校にて講師業務。担当入塾体験者の80%を入塾化、自教室売上 前年対比130%(全社1位)、赤字教室を黒字化。</span>
+          <b>東進衛星予備校FC校 入社(教育事業)</b>
+          <span class="sub">講師業務。担当入塾体験者の80%を入塾化、自教室売上 前年対比130%(全社1位)、赤字教室を黒字化。</span>
         </li>
         <li>
           <span class="year">2020</span>
-          <b>4U Life Planning株式会社 入社(東京海上日動火災保険 出向)</b>
+          <b>生命保険乗合総合代理店 入社(東京海上日動火災保険 出向)</b>
           <span class="sub">生命保険・損害保険・医療保険の募集活動。フルコミッションによる完全成果給制度のもとで営業成績優秀賞を受賞。</span>
         </li>
         <li class="hi">
           <span class="year">2021</span>
           <b>株式会社Comternal 創業 ／ 代表取締役就任</b>
           <span class="sub">生命保険・医療保険事業を行う会社を創業。2024年より取締役会長。</span>
+        </li>
+        <li>
+          <span class="year">2021</span>
+          <b>大阪スマートシティパートナーズフォーラム 参画</b>
+          <span class="sub">官民連携による都市課題解決を目指すフォーラムに参画。行政職員に対し、データ活用・先端技術領域の研修を実施。</span>
         </li>
         <li class="hi">
           <span class="year">2023</span>
@@ -644,7 +673,7 @@
         <li>
           <span class="year">2024</span>
           <b>株式会社グレートハック 創業(統計分析事業)</b>
-          <span class="sub">統計分析および選挙戦略コンサルティング事業を展開。</span>
+          <span class="sub">統計分析事業を展開。</span>
         </li>
         <li class="hi">
           <span class="year">2024</span>
@@ -665,7 +694,7 @@
     </div>
     <div class="origin-grid">
       <div class="origin-quote reveal">
-        「やっている感」はあるけれど、<br />現場の負荷は、ちっとも減っていない。<br /><br />――そんな政治を、変えたいんです。
+        「やっている感」はあるけれど、<br />現場の負荷は、ちっとも減っていない。<br /><br />――そんな負荷を、政治で解決したいんです。
       </div>
       <div class="origin-body reveal">
         <p>
@@ -742,7 +771,7 @@
           <div class="num">03</div>
         </div>
         <div>
-          <h3>データと現場に根ざした行財政運営の再設計</h3>
+          <h3>データと現場に根ざした行財政運営の更なる改善</h3>
           <p class="lead">「きちんと調べずに走り出す政治」「費用対効果を検証しない行政」を改めます。限られた財源を本当に必要な分野に振り向けるため、新規事業の前に既存事業の仮説と成果を検証する文化を区政に根づかせます。</p>
           <div class="points">
             <div class="point"><b>事前評価と仮説設定の徹底</b><span>「政策仮説シート」の導入、小規模試行(パイロット)の標準化、目的・対象・代替策の明文化。</span></div>
@@ -824,6 +853,40 @@
         <h3>株式会社Comternal ｜ サブスク型後見人で将来の不安に備える</h3>
         <span class="ex">記事を読む</span>
       </a>
+
+      <a class="media-card reveal" href="#" target="_blank" rel="noopener">
+        <div class="media-head">
+          <span class="media-name">大網白里市 ／ プレスリリース</span>
+          <span class="media-tag release">業務連携</span>
+          <span class="media-date">2024</span>
+        </div>
+        <h3>千葉県大網白里市と、終活支援・地域包括ケア領域での連携を開始</h3>
+        <span class="ex">記事を読む</span>
+      </a>
+
+      <a class="media-card reveal" href="https://topics.smt.docomo.ne.jp/article/magazinesummit/trend/magazinesummit-https_editor.magazinesummit.jp_p_151686?redirect=1" target="_blank" rel="noopener">
+        <div class="media-head">
+          <span class="media-name">dmenuニュース</span>
+          <span class="media-tag interview">INTERVIEW</span>
+          <span class="media-date">2024</span>
+        </div>
+        <h3>「制度のすき間に落ちる人」を救う──終活支援のソーシャル企業 代表インタビュー</h3>
+        <span class="ex">記事を読む</span>
+      </a>
+    </div>
+
+    <!-- YouTube 動画埋め込み -->
+    <div class="media-video reveal">
+      <h3 class="media-video-title">動画で見る活動・想い</h3>
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/skm9qDm6xUQ"
+          title="田中せいじ YouTube動画"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
     </div>
 
     <div class="media-more">
@@ -869,9 +932,36 @@
       </a>
     </div>
 
-    <div class="ig-embed-note">
-      <strong>📷 投稿の埋め込み欄(準備中)</strong><br />
-      Instagram投稿の埋め込み、YouTubeチャンネル開設後の動画埋め込みは、このエリアに追加していきます。
+    <!-- 投稿の埋め込み -->
+    <div class="embed-section reveal">
+      <h3 class="embed-title">最新の発信</h3>
+      <div class="embed-grid">
+        <!-- Instagram 埋め込み -->
+        <div class="embed-col">
+          <div class="embed-label">INSTAGRAM</div>
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/tanaka_seiji_bb/"
+            data-instgrm-version="14"
+            style="background:#FFF; border:0; border-radius:14px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:0; padding:0; width:100%;">
+            <a href="https://www.instagram.com/tanaka_seiji_bb/" target="_blank" rel="noopener" style="display:block;padding:24px;text-decoration:none;color:var(--ink-2);">
+              <strong style="display:block;font-size:16px;color:var(--green-800);margin-bottom:6px;">@tanaka_seiji_bb</strong>
+              Instagramで最新の活動をご覧ください →
+            </a>
+          </blockquote>
+        </div>
+
+        <!-- X (Twitter) 埋め込み -->
+        <div class="embed-col">
+          <div class="embed-label">X (TWITTER)</div>
+          <a class="twitter-timeline"
+             data-height="600"
+             data-theme="light"
+             data-chrome="noheader nofooter transparent"
+             href="https://twitter.com/tanaka_seiji_bb?ref_src=twsrc%5Etfw">
+            @tanaka_seiji_bb の最新ポスト
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -993,5 +1083,8 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
+<!-- SNS 埋め込みスクリプト -->
+<script async src="https://www.instagram.com/embed.js"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
